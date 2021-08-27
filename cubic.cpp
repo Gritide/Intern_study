@@ -6,6 +6,7 @@ int lol(int g)
     int increment=g;
     for(int j=1;j<3;j++)
     {
+        //add it input amount time do that twice
     for(int i =1; i<g;i++){
         answer=answer+increment;
         //3+3 =6
