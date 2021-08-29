@@ -9,10 +9,10 @@ int lol(int g)
         //add it input amount time do that twice
     for(int i =1; i<g;i++){
         answer=answer+increment;
-        //3+3 =6
-        //6+3=9
-        //9+9=18
-        //18+9=27
+        //add 3 times 3 to  find n
+        //add 3 time n
+        //3+3=6
+        //6+3
         
     }
     increment=answer;
