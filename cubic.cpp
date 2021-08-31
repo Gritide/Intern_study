@@ -10,7 +10,7 @@ int lol(int g)
     for(int i =1; i<g;i++){
         answer=answer+increment;
         //add 3 times 3 to  find n
-        //add 3 time n
+        //add 3 times n
         //3+3=6
         //6+3
         
