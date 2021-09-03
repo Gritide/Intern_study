@@ -6,7 +6,7 @@ bool solve(vector<int>& nums) {
     //empty input and single input handler
     int counter=1;
     bool temp=true;
-    if(nums.size()==0 || nums.size()==1)
+    if(nums.size()==0 || nums.size()%2!=0)
     {
         temp=false;
     }
