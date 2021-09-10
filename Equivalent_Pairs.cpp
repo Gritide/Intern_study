@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 #include<vector>
 using namespace std;
 int solve(vector<int>& nums) {
@@ -17,6 +17,7 @@ int solve(vector<int>& nums) {
     {
         for(int j=i+1;j<nums.size();j++)
         {
+
             if(nums[i]==nums[j])
             {
                 count++;
@@ -29,4 +30,24 @@ int main()
 {
     vector<int> nums={3,2,3,2,2};
     cout<<solve(nums);
+}*/
+#include<iostream>
+#include<vector>
+#include <unordered_map>
+using namespace std;
+int solve(vector<int>& nums) {
+    //key and the value
+
+    unordered_map<int, int> m;
+    int ans = 0;
+    for (int i = 0; i < nums.size(); i++) {
+        //nums[i] is the key increment if you have the key
+        ans += m[nums[i]]++;
+    }
+    return ans;
+}
+int main() {
+  vector<int>z={3, 2, 3, 2, 2};
+  cout<<solve(z);
+  return 0;
 }

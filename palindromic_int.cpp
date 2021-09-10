@@ -1,3 +1,8 @@
+/*Time Complexity
+\mathcal{O}(n)O(n), where n is the number of digits of an integer in base 10.
+
+Space Complexity
+\mathcal{O}(1)O(1) [No extra spaces are needed. ]*/
 bool solve(int num) {
     int x;
     //divided the nmber from middle

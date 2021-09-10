@@ -1,9 +1,11 @@
 #include<iostream>
 #include<vector>
+#include<unordered_map>
 using namespace std;
+//O(n)
 vector<int> xd(vector<int>nums, int goal)
 {
-    vector<int> new_vec;
+    /*vector<int> new_vec;
     int start=0;
     int end=nums.size()-1;
     
@@ -32,6 +34,7 @@ vector<int> xd(vector<int>nums, int goal)
             
             
         }
+
     }
     for(int i=0;i<new_vec.size();i++)
     {
@@ -40,7 +43,29 @@ vector<int> xd(vector<int>nums, int goal)
     return new_vec;
     //set the value end of the list and begining of the list
     //while loop 
-  
+  */
+ unordered_map<int,int> z;
+ vector<int>ans(2);
+ for(int i=0;i<nums.size();i++)
+{
+    int complement=goal-nums[i];
+ 
+    if(z.find(complement)!=z.end())
+    {
+        ans[0]=i;
+        ans[1]=z[complement];
+
+
+    }
+    else{
+        z[nums[i]]=i;
+    }
+}
+for(int i=0;i<ans.size();i++)
+{
+    cout<<ans[i]<<endl;
+}
+return ans;
 }  
 int main()
 {

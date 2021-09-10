@@ -1,30 +1,50 @@
-vector<int> solve(vector<int>& nums) {
-   
-    //for loop
-        // get i value for nums and multiple itself
-        //set that value equal to nums i value
-        //sort the vector
-        //return thevector
-        int temp2;
-        int temp;
-    for (int i=0;i<nums.size();i++)
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<unordered_map>
+using namespace std;
+vector<int> sortedSquares(vector<int>& nums) {
+    
+    int n=nums.size();
+    vector<int>ans;
+     vector<int>ans;
+    int i=0;
+    int j=n-1;
+    while(i<=j)
     {
-       
-        nums[i]=nums[i]*nums[i];
-
+       if((nums[i]*nums[i])>(nums[j]*nums[j]))
+       {
+           ans.push_back(nums[i]*nums[i]);
+           i++;
+       }
+       if((nums[i]*nums[i])<(nums[j]*nums[j]))
+       {
+           ans.push_back(nums[j]*nums[j]);
+           j--;
+       }
+       else{
+           ans.push_back(nums[i]*nums[i]);
+           ans.push_back(nums[j]*nums[j]);
+           i++;
+           j--;
+       }
     }
 
-       for(int j=0;j<nums.size();j++)
+    for(int m=0;m<ans.size();m++)
     {
-        for(int z=0;z<nums.size();z++)
-        {
-            if(nums[z]<nums[j])
-            {
-               
-            }
-        }
-  
+        ans.pop_back();
     }
-   
-    return nums;
-}
+        return ans;
+    }
+    int main()
+    {
+        //   i
+        //81 4 0 4 9
+        //       j
+        //81 9
+
+        vector<int>copy={-9, -2, 0, 2, 3};
+        sortedSquares(copy);
+    }
+

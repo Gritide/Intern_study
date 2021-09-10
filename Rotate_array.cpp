@@ -1,5 +1,6 @@
 class Solution {
 public:
+//O(n*k)
     void rotate(vector<int>& nums, int k) {
          if ((k <= 0))
             {
